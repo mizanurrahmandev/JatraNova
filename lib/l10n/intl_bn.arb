@@ -69,6 +69,68 @@
   "auth_error_invalid_credentials": "মোবাইল/ইমেইল অথবা পাসওয়ার্ড সঠিক নয়।",
   "auth_error_user_exists": "এই ইমেইল বা মোবাইল নম্বরে ইতিমধ্যে একটি অ্যাকাউন্ট রয়েছে।",
 
+  "home_greeting_morning": "শুভ সকাল,",
+  "home_greeting_afternoon": "শুভ অপরাহ্ন,",
+  "home_greeting_evening": "শুভ সন্ধ্যা,",
+  "home_greeting_traveler": "যাত্রী",
+  "home_search_title": "কোথায় ভ্রমণ করতে চান?",
+  "home_popular_routes": "জনপ্রিয় রুটসমূহ",
+  "home_see_all": "সব দেখুন",
+  "home_feature_connecting_title": "সংযুক্ত যাত্রা (কানেক্টিং)",
+  "home_feature_connecting_desc": "সরাসরি বাস নেই? একই অপারেটরে সহজে ট্রান্সফার করুন।",
+  "home_feature_handover_title": "টিকিট হস্তান্তর",
+  "home_feature_handover_desc": "যেতে পারছেন না? টিকিট হস্তান্তর করে ৫০% অর্থ ফেরত পান।",
+
+  "search_from_label": "যাত্রার শুরু (Origin)",
+  "search_from_hint": "শহর নির্বাচন করুন",
+  "search_to_label": "গন্তব্য (Destination)",
+  "search_to_hint": "গন্তব্যের শহর নির্বাচন করুন",
+  "search_date_label": "যাত্রার তারিখ",
+  "search_passengers_label": "যাত্রী সংখ্যা",
+  "search_action_button": "বাস অনুসন্ধান করুন",
+  "search_popular_cities": "জনপ্রিয় শহরসমূহ",
+  "search_all_cities": "সকল শহর",
+  "search_select_city_title": "স্থান নির্বাচন করুন",
+  "search_city_search_hint": "শহরের নাম লিখুন...",
+  "search_select_date_title": "ভ্রমণের তারিখ নির্ধারণ",
+  "search_passenger_counter_title": "যাত্রীর সংখ্যা",
+  "search_passenger_limit_note": "ডেমো অ্যাপে সর্বোচ্চ ৪ জন যাত্রী নির্বাচন করা যাবে",
+  "search_error_same_city": "যাত্রার শুরু ও গন্তব্য একই শহর হতে পারে না।",
+  "search_error_empty_cities": "অনুগ্রহ করে শুরু এবং গন্তব্য উভয় শহর নির্বাচন করুন।",
+
+  "results_title": "উপলব্ধ বাসসমূহ",
+  "results_count_format": "{count} টি বাস পাওয়া গেছে",
+  "@results_count_format": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "results_tab_all": "সকল বাস",
+  "results_tab_direct": "সরাসরি ট্রিপ",
+  "results_tab_connecting": "সংযুক্ত (২-লেগ)",
+  "results_seats_available": "{count} টি আসন বাকি",
+  "@results_seats_available": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "results_starting_from": "ভাড়া শুরু",
+  "results_select_seats": "আসন নির্বাচন করুন",
+  "results_no_buses_found": "এই তারিখ ও রুটে কোনো বাস পাওয়া যায়নি।",
+  "results_change_search": "অনুসন্ধান পরিবর্তন করুন",
+
+  "filter_title": "ফিল্টার ও সাজানো",
+  "filter_sort_by": "সাজানোর ক্রম",
+  "filter_sort_earliest": "আগে ছাড়ার সময়",
+  "filter_sort_lowest_fare": "সর্বনিম্ন ভাড়া",
+  "filter_sort_duration": "কম সময়",
+  "filter_bus_type": "বাসের ধরন",
+  "filter_ac": "এসি কোচ",
+  "filter_non_ac": "নন-এসি কোচ",
+  "filter_operator": "বাস অপারেটর",
+  "filter_apply": "প্রয়োগ করুন",
+  "filter_reset": "রিসেট",
+
   "language_title": "ভাষা নির্বাচন করুন",
   "language_subtitle": "আপনার পছন্দের ভাষা বেছে নিন",
   "language_english": "English",

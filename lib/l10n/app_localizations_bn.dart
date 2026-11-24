@@ -209,6 +209,160 @@ class AppLocalizationsBn extends AppLocalizations {
       'এই ইমেইল বা মোবাইল নম্বরে ইতিমধ্যে একটি অ্যাকাউন্ট রয়েছে।';
 
   @override
+  String get home_greeting_morning => 'শুভ সকাল,';
+
+  @override
+  String get home_greeting_afternoon => 'শুভ অপরাহ্ন,';
+
+  @override
+  String get home_greeting_evening => 'শুভ সন্ধ্যা,';
+
+  @override
+  String get home_greeting_traveler => 'যাত্রী';
+
+  @override
+  String get home_search_title => 'কোথায় ভ্রমণ করতে চান?';
+
+  @override
+  String get home_popular_routes => 'জনপ্রিয় রুটসমূহ';
+
+  @override
+  String get home_see_all => 'সব দেখুন';
+
+  @override
+  String get home_feature_connecting_title => 'সংযুক্ত যাত্রা (কানেক্টিং)';
+
+  @override
+  String get home_feature_connecting_desc =>
+      'সরাসরি বাস নেই? একই অপারেটরে সহজে ট্রান্সফার করুন।';
+
+  @override
+  String get home_feature_handover_title => 'টিকিট হস্তান্তর';
+
+  @override
+  String get home_feature_handover_desc =>
+      'যেতে পারছেন না? টিকিট হস্তান্তর করে ৫০% অর্থ ফেরত পান।';
+
+  @override
+  String get search_from_label => 'যাত্রার শুরু (Origin)';
+
+  @override
+  String get search_from_hint => 'শহর নির্বাচন করুন';
+
+  @override
+  String get search_to_label => 'গন্তব্য (Destination)';
+
+  @override
+  String get search_to_hint => 'গন্তব্যের শহর নির্বাচন করুন';
+
+  @override
+  String get search_date_label => 'যাত্রার তারিখ';
+
+  @override
+  String get search_passengers_label => 'যাত্রী সংখ্যা';
+
+  @override
+  String get search_action_button => 'বাস অনুসন্ধান করুন';
+
+  @override
+  String get search_popular_cities => 'জনপ্রিয় শহরসমূহ';
+
+  @override
+  String get search_all_cities => 'সকল শহর';
+
+  @override
+  String get search_select_city_title => 'স্থান নির্বাচন করুন';
+
+  @override
+  String get search_city_search_hint => 'শহরের নাম লিখুন...';
+
+  @override
+  String get search_select_date_title => 'ভ্রমণের তারিখ নির্ধারণ';
+
+  @override
+  String get search_passenger_counter_title => 'যাত্রীর সংখ্যা';
+
+  @override
+  String get search_passenger_limit_note =>
+      'ডেমো অ্যাপে সর্বোচ্চ ৪ জন যাত্রী নির্বাচন করা যাবে';
+
+  @override
+  String get search_error_same_city =>
+      'যাত্রার শুরু ও গন্তব্য একই শহর হতে পারে না।';
+
+  @override
+  String get search_error_empty_cities =>
+      'অনুগ্রহ করে শুরু এবং গন্তব্য উভয় শহর নির্বাচন করুন।';
+
+  @override
+  String get results_title => 'উপলব্ধ বাসসমূহ';
+
+  @override
+  String results_count_format(int count) {
+    return '$count টি বাস পাওয়া গেছে';
+  }
+
+  @override
+  String get results_tab_all => 'সকল বাস';
+
+  @override
+  String get results_tab_direct => 'সরাসরি ট্রিপ';
+
+  @override
+  String get results_tab_connecting => 'সংযুক্ত (২-লেগ)';
+
+  @override
+  String results_seats_available(int count) {
+    return '$count টি আসন বাকি';
+  }
+
+  @override
+  String get results_starting_from => 'ভাড়া শুরু';
+
+  @override
+  String get results_select_seats => 'আসন নির্বাচন করুন';
+
+  @override
+  String get results_no_buses_found =>
+      'এই তারিখ ও রুটে কোনো বাস পাওয়া যায়নি।';
+
+  @override
+  String get results_change_search => 'অনুসন্ধান পরিবর্তন করুন';
+
+  @override
+  String get filter_title => 'ফিল্টার ও সাজানো';
+
+  @override
+  String get filter_sort_by => 'সাজানোর ক্রম';
+
+  @override
+  String get filter_sort_earliest => 'আগে ছাড়ার সময়';
+
+  @override
+  String get filter_sort_lowest_fare => 'সর্বনিম্ন ভাড়া';
+
+  @override
+  String get filter_sort_duration => 'কম সময়';
+
+  @override
+  String get filter_bus_type => 'বাসের ধরন';
+
+  @override
+  String get filter_ac => 'এসি কোচ';
+
+  @override
+  String get filter_non_ac => 'নন-এসি কোচ';
+
+  @override
+  String get filter_operator => 'বাস অপারেটর';
+
+  @override
+  String get filter_apply => 'প্রয়োগ করুন';
+
+  @override
+  String get filter_reset => 'রিসেট';
+
+  @override
   String get language_title => 'ভাষা নির্বাচন করুন';
 
   @override

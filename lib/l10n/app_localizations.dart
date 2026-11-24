@@ -476,6 +476,294 @@ abstract class AppLocalizations {
   /// **'An account with this email or mobile already exists.'**
   String get auth_error_user_exists;
 
+  /// No description provided for @home_greeting_morning.
+  ///
+  /// In en, this message translates to:
+  /// **'Good morning,'**
+  String get home_greeting_morning;
+
+  /// No description provided for @home_greeting_afternoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Good afternoon,'**
+  String get home_greeting_afternoon;
+
+  /// No description provided for @home_greeting_evening.
+  ///
+  /// In en, this message translates to:
+  /// **'Good evening,'**
+  String get home_greeting_evening;
+
+  /// No description provided for @home_greeting_traveler.
+  ///
+  /// In en, this message translates to:
+  /// **'Traveler'**
+  String get home_greeting_traveler;
+
+  /// No description provided for @home_search_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Where would you like to travel?'**
+  String get home_search_title;
+
+  /// No description provided for @home_popular_routes.
+  ///
+  /// In en, this message translates to:
+  /// **'Popular Routes'**
+  String get home_popular_routes;
+
+  /// No description provided for @home_see_all.
+  ///
+  /// In en, this message translates to:
+  /// **'See All'**
+  String get home_see_all;
+
+  /// No description provided for @home_feature_connecting_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Connecting Journeys'**
+  String get home_feature_connecting_title;
+
+  /// No description provided for @home_feature_connecting_desc.
+  ///
+  /// In en, this message translates to:
+  /// **'No direct bus? Transfer smoothly with same operator.'**
+  String get home_feature_connecting_desc;
+
+  /// No description provided for @home_feature_handover_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Ticket Handover'**
+  String get home_feature_handover_title;
+
+  /// No description provided for @home_feature_handover_desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Can\'t travel? Transfer your ticket and get 50% refund.'**
+  String get home_feature_handover_desc;
+
+  /// No description provided for @search_from_label.
+  ///
+  /// In en, this message translates to:
+  /// **'From (Origin)'**
+  String get search_from_label;
+
+  /// No description provided for @search_from_hint.
+  ///
+  /// In en, this message translates to:
+  /// **'Select departure city'**
+  String get search_from_hint;
+
+  /// No description provided for @search_to_label.
+  ///
+  /// In en, this message translates to:
+  /// **'To (Destination)'**
+  String get search_to_label;
+
+  /// No description provided for @search_to_hint.
+  ///
+  /// In en, this message translates to:
+  /// **'Select destination city'**
+  String get search_to_hint;
+
+  /// No description provided for @search_date_label.
+  ///
+  /// In en, this message translates to:
+  /// **'Journey Date'**
+  String get search_date_label;
+
+  /// No description provided for @search_passengers_label.
+  ///
+  /// In en, this message translates to:
+  /// **'Passengers'**
+  String get search_passengers_label;
+
+  /// No description provided for @search_action_button.
+  ///
+  /// In en, this message translates to:
+  /// **'Search Buses'**
+  String get search_action_button;
+
+  /// No description provided for @search_popular_cities.
+  ///
+  /// In en, this message translates to:
+  /// **'Popular Cities'**
+  String get search_popular_cities;
+
+  /// No description provided for @search_all_cities.
+  ///
+  /// In en, this message translates to:
+  /// **'All Cities'**
+  String get search_all_cities;
+
+  /// No description provided for @search_select_city_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Location'**
+  String get search_select_city_title;
+
+  /// No description provided for @search_city_search_hint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search city name...'**
+  String get search_city_search_hint;
+
+  /// No description provided for @search_select_date_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Travel Date'**
+  String get search_select_date_title;
+
+  /// No description provided for @search_passenger_counter_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Number of Passengers'**
+  String get search_passenger_counter_title;
+
+  /// No description provided for @search_passenger_limit_note.
+  ///
+  /// In en, this message translates to:
+  /// **'Maximum 4 passengers per booking in demo'**
+  String get search_passenger_limit_note;
+
+  /// No description provided for @search_error_same_city.
+  ///
+  /// In en, this message translates to:
+  /// **'Origin and destination cities cannot be the same.'**
+  String get search_error_same_city;
+
+  /// No description provided for @search_error_empty_cities.
+  ///
+  /// In en, this message translates to:
+  /// **'Please select both origin and destination.'**
+  String get search_error_empty_cities;
+
+  /// No description provided for @results_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Available Buses'**
+  String get results_title;
+
+  /// No description provided for @results_count_format.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} buses available'**
+  String results_count_format(int count);
+
+  /// No description provided for @results_tab_all.
+  ///
+  /// In en, this message translates to:
+  /// **'All Buses'**
+  String get results_tab_all;
+
+  /// No description provided for @results_tab_direct.
+  ///
+  /// In en, this message translates to:
+  /// **'Direct Trips'**
+  String get results_tab_direct;
+
+  /// No description provided for @results_tab_connecting.
+  ///
+  /// In en, this message translates to:
+  /// **'Connecting (2-Leg)'**
+  String get results_tab_connecting;
+
+  /// No description provided for @results_seats_available.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} Seats Left'**
+  String results_seats_available(int count);
+
+  /// No description provided for @results_starting_from.
+  ///
+  /// In en, this message translates to:
+  /// **'Starting from'**
+  String get results_starting_from;
+
+  /// No description provided for @results_select_seats.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Seats'**
+  String get results_select_seats;
+
+  /// No description provided for @results_no_buses_found.
+  ///
+  /// In en, this message translates to:
+  /// **'No buses found for this date & route.'**
+  String get results_no_buses_found;
+
+  /// No description provided for @results_change_search.
+  ///
+  /// In en, this message translates to:
+  /// **'Change Search'**
+  String get results_change_search;
+
+  /// No description provided for @filter_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Filter & Sort'**
+  String get filter_title;
+
+  /// No description provided for @filter_sort_by.
+  ///
+  /// In en, this message translates to:
+  /// **'Sort By'**
+  String get filter_sort_by;
+
+  /// No description provided for @filter_sort_earliest.
+  ///
+  /// In en, this message translates to:
+  /// **'Earliest Departure'**
+  String get filter_sort_earliest;
+
+  /// No description provided for @filter_sort_lowest_fare.
+  ///
+  /// In en, this message translates to:
+  /// **'Lowest Fare'**
+  String get filter_sort_lowest_fare;
+
+  /// No description provided for @filter_sort_duration.
+  ///
+  /// In en, this message translates to:
+  /// **'Fastest Journey'**
+  String get filter_sort_duration;
+
+  /// No description provided for @filter_bus_type.
+  ///
+  /// In en, this message translates to:
+  /// **'Bus Type'**
+  String get filter_bus_type;
+
+  /// No description provided for @filter_ac.
+  ///
+  /// In en, this message translates to:
+  /// **'AC Coach'**
+  String get filter_ac;
+
+  /// No description provided for @filter_non_ac.
+  ///
+  /// In en, this message translates to:
+  /// **'Non-AC Coach'**
+  String get filter_non_ac;
+
+  /// No description provided for @filter_operator.
+  ///
+  /// In en, this message translates to:
+  /// **'Bus Operator'**
+  String get filter_operator;
+
+  /// No description provided for @filter_apply.
+  ///
+  /// In en, this message translates to:
+  /// **'Apply Filters'**
+  String get filter_apply;
+
+  /// No description provided for @filter_reset.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset Filters'**
+  String get filter_reset;
+
   /// No description provided for @language_title.
   ///
   /// In en, this message translates to:

@@ -7,6 +7,8 @@ import '../../features/auth/presentation/pages/register_page.dart';
 import '../../features/auth/presentation/pages/splash_page.dart';
 import '../../features/auth/presentation/pages/welcome_page.dart';
 import '../../features/home/presentation/pages/home_page.dart';
+import '../../features/search/presentation/pages/search_buses_page.dart';
+import '../../features/search/presentation/pages/search_results_page.dart';
 
 class RoutePath {
   RoutePath._();
@@ -18,7 +20,8 @@ class RoutePath {
   static const String login = '/login';
   static const String register = '/register';
   static const String home = '/home';
-  static const String search = '/search';
+  static const String searchBuses = '/search-buses';
+  static const String searchResults = '/search-results';
   static const String tickets = '/tickets';
   static const String profile = '/profile';
   static const String busDetails = '/bus-details';
@@ -63,6 +66,14 @@ class AppRoute {
       GoRoute(
         path: RoutePath.home,
         builder: (context, state) => const HomePage(),
+      ),
+      GoRoute(
+        path: RoutePath.searchBuses,
+        builder: (context, state) => const SearchBusesPage(),
+      ),
+      GoRoute(
+        path: RoutePath.searchResults,
+        builder: (context, state) => const SearchResultsPage(),
       ),
     ],
   );

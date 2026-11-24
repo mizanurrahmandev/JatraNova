@@ -7,6 +7,7 @@ import 'core/localization/locale_cubit.dart';
 import 'core/route/route_config.dart';
 import 'core/session/session_cubit.dart';
 import 'core/theme/app_theme.dart';
+import 'features/search/presentation/bloc/search_bloc.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -20,6 +21,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider<SessionCubit>(
           create: (_) => getIt<SessionCubit>(),
+        ),
+        BlocProvider<SearchBloc>(
+          create: (_) => getIt<SearchBloc>(),
         ),
       ],
       child: BlocBuilder<LocaleCubit, Locale>(

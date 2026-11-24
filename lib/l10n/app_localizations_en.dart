@@ -209,6 +209,159 @@ class AppLocalizationsEn extends AppLocalizations {
       'An account with this email or mobile already exists.';
 
   @override
+  String get home_greeting_morning => 'Good morning,';
+
+  @override
+  String get home_greeting_afternoon => 'Good afternoon,';
+
+  @override
+  String get home_greeting_evening => 'Good evening,';
+
+  @override
+  String get home_greeting_traveler => 'Traveler';
+
+  @override
+  String get home_search_title => 'Where would you like to travel?';
+
+  @override
+  String get home_popular_routes => 'Popular Routes';
+
+  @override
+  String get home_see_all => 'See All';
+
+  @override
+  String get home_feature_connecting_title => 'Connecting Journeys';
+
+  @override
+  String get home_feature_connecting_desc =>
+      'No direct bus? Transfer smoothly with same operator.';
+
+  @override
+  String get home_feature_handover_title => 'Ticket Handover';
+
+  @override
+  String get home_feature_handover_desc =>
+      'Can\'t travel? Transfer your ticket and get 50% refund.';
+
+  @override
+  String get search_from_label => 'From (Origin)';
+
+  @override
+  String get search_from_hint => 'Select departure city';
+
+  @override
+  String get search_to_label => 'To (Destination)';
+
+  @override
+  String get search_to_hint => 'Select destination city';
+
+  @override
+  String get search_date_label => 'Journey Date';
+
+  @override
+  String get search_passengers_label => 'Passengers';
+
+  @override
+  String get search_action_button => 'Search Buses';
+
+  @override
+  String get search_popular_cities => 'Popular Cities';
+
+  @override
+  String get search_all_cities => 'All Cities';
+
+  @override
+  String get search_select_city_title => 'Select Location';
+
+  @override
+  String get search_city_search_hint => 'Search city name...';
+
+  @override
+  String get search_select_date_title => 'Select Travel Date';
+
+  @override
+  String get search_passenger_counter_title => 'Number of Passengers';
+
+  @override
+  String get search_passenger_limit_note =>
+      'Maximum 4 passengers per booking in demo';
+
+  @override
+  String get search_error_same_city =>
+      'Origin and destination cities cannot be the same.';
+
+  @override
+  String get search_error_empty_cities =>
+      'Please select both origin and destination.';
+
+  @override
+  String get results_title => 'Available Buses';
+
+  @override
+  String results_count_format(int count) {
+    return '$count buses available';
+  }
+
+  @override
+  String get results_tab_all => 'All Buses';
+
+  @override
+  String get results_tab_direct => 'Direct Trips';
+
+  @override
+  String get results_tab_connecting => 'Connecting (2-Leg)';
+
+  @override
+  String results_seats_available(int count) {
+    return '$count Seats Left';
+  }
+
+  @override
+  String get results_starting_from => 'Starting from';
+
+  @override
+  String get results_select_seats => 'Select Seats';
+
+  @override
+  String get results_no_buses_found => 'No buses found for this date & route.';
+
+  @override
+  String get results_change_search => 'Change Search';
+
+  @override
+  String get filter_title => 'Filter & Sort';
+
+  @override
+  String get filter_sort_by => 'Sort By';
+
+  @override
+  String get filter_sort_earliest => 'Earliest Departure';
+
+  @override
+  String get filter_sort_lowest_fare => 'Lowest Fare';
+
+  @override
+  String get filter_sort_duration => 'Fastest Journey';
+
+  @override
+  String get filter_bus_type => 'Bus Type';
+
+  @override
+  String get filter_ac => 'AC Coach';
+
+  @override
+  String get filter_non_ac => 'Non-AC Coach';
+
+  @override
+  String get filter_operator => 'Bus Operator';
+
+  @override
+  String get filter_apply => 'Apply Filters';
+
+  @override
+  String get filter_reset => 'Reset Filters';
+
+  @override
   String get language_title => 'Choose Language';
 
   @override

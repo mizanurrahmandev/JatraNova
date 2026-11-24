@@ -69,6 +69,68 @@
   "auth_error_invalid_credentials": "Invalid email/mobile or password.",
   "auth_error_user_exists": "An account with this email or mobile already exists.",
 
+  "home_greeting_morning": "Good morning,",
+  "home_greeting_afternoon": "Good afternoon,",
+  "home_greeting_evening": "Good evening,",
+  "home_greeting_traveler": "Traveler",
+  "home_search_title": "Where would you like to travel?",
+  "home_popular_routes": "Popular Routes",
+  "home_see_all": "See All",
+  "home_feature_connecting_title": "Connecting Journeys",
+  "home_feature_connecting_desc": "No direct bus? Transfer smoothly with same operator.",
+  "home_feature_handover_title": "Ticket Handover",
+  "home_feature_handover_desc": "Can't travel? Transfer your ticket and get 50% refund.",
+
+  "search_from_label": "From (Origin)",
+  "search_from_hint": "Select departure city",
+  "search_to_label": "To (Destination)",
+  "search_to_hint": "Select destination city",
+  "search_date_label": "Journey Date",
+  "search_passengers_label": "Passengers",
+  "search_action_button": "Search Buses",
+  "search_popular_cities": "Popular Cities",
+  "search_all_cities": "All Cities",
+  "search_select_city_title": "Select Location",
+  "search_city_search_hint": "Search city name...",
+  "search_select_date_title": "Select Travel Date",
+  "search_passenger_counter_title": "Number of Passengers",
+  "search_passenger_limit_note": "Maximum 4 passengers per booking in demo",
+  "search_error_same_city": "Origin and destination cities cannot be the same.",
+  "search_error_empty_cities": "Please select both origin and destination.",
+
+  "results_title": "Available Buses",
+  "results_count_format": "{count} buses available",
+  "@results_count_format": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "results_tab_all": "All Buses",
+  "results_tab_direct": "Direct Trips",
+  "results_tab_connecting": "Connecting (2-Leg)",
+  "results_seats_available": "{count} Seats Left",
+  "@results_seats_available": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "results_starting_from": "Starting from",
+  "results_select_seats": "Select Seats",
+  "results_no_buses_found": "No buses found for this date & route.",
+  "results_change_search": "Change Search",
+
+  "filter_title": "Filter & Sort",
+  "filter_sort_by": "Sort By",
+  "filter_sort_earliest": "Earliest Departure",
+  "filter_sort_lowest_fare": "Lowest Fare",
+  "filter_sort_duration": "Fastest Journey",
+  "filter_bus_type": "Bus Type",
+  "filter_ac": "AC Coach",
+  "filter_non_ac": "Non-AC Coach",
+  "filter_operator": "Bus Operator",
+  "filter_apply": "Apply Filters",
+  "filter_reset": "Reset Filters",
+
   "language_title": "Choose Language",
   "language_subtitle": "Select your preferred language",
   "language_english": "English",
