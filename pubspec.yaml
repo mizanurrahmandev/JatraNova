@@ -35,3 +35,15 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+  assets:
+    - assets/backgrounds/splash_background.jpg
+    - assets/images/bus_logo.png
+    - assets/images/google_logo.png
+    - assets/backgrounds/background_onboarding.jpg
+    - assets/backgrounds/background_langulage.jpg
+    - assets/backgrounds/background.png
+    - assets/backgrounds/reset_password_bg.jpg
+    - assets/illustrations/illustration_1.png
+    - assets/illustrations/illustration_2.png
+    - assets/illustrations/illustration_3.png
+    - assets/illustrations/email_illustration.png

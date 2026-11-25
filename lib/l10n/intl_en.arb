@@ -1,7 +1,140 @@
 {
   "@@locale": "en",
   "appName": "JatraNova",
-  "appTagline": "Your Journey, Connected",
+  "appNameFirst": "Jatra",
+  "appNameSecond": "Nova",
+  "appTagline": "Your Journey, Connected.",
   "loading": "Loading...",
-  "errorGeneric": "Something went wrong. Please try again."
+  "errorGeneric": "Something went wrong. Please try again.",
+  "skip": "Skip",
+  "next": "Next",
+  "getStarted": "Get Started",
+  "onboarding1TitlePrefix": "Travel Smart\nTravel ",
+  "onboarding1TitleHighlight": "Better",
+  "onboarding1Subtitle": "Book your bus tickets\nwith ease and comfort.",
+  "onboarding2TitlePrefix": "Safe & Reliable\n",
+  "onboarding2TitleHighlight": "Journey",
+  "onboarding2Subtitle": "Travel with confidence\nacross Bangladesh.",
+  "onboarding2TrustPlatform": "Trusted\nPlatform",
+  "onboarding2TrustSupport": "24/7\nSupport",
+  "onboarding2TrustPayments": "Secure\nPayments",
+  "onboarding3TitlePrefix": "Flexible & Connected\n",
+  "onboarding3TitleHighlight": "Journeys",
+  "onboarding3Subtitle": "Easily exchange tickets and connect\nseamlessly across routes.",
+  "chooseLanguageTitle": "Choose Language",
+  "chooseLanguageSubtitle": "Select your preferred language",
+  "languageEnglish": "English",
+  "languageBangla": "বাংলা",
+  "continueLabel": "Continue",
+  "welcomePlaceholderTitle": "Welcome to JatraNova",
+  "welcomePlaceholderSubtitle": "Welcome screen will be available in the next step.",
+  "welcomeTitle": "Welcome to\nJatraNova",
+  "welcomeSubtitle": "Book, track and manage\nyour journeys with ease.",
+  "login": "Login",
+  "register": "Register",
+  "orDivider": "or",
+  "continueAsGuest": "Continue as Guest",
+  "loginPlaceholderTitle": "Login",
+  "registerPlaceholderTitle": "Register",
+  "guestHomePlaceholderTitle": "Guest Home",
+  "comingSoonSubtitle": "This screen will be implemented in the next step.",
+  "loginTitle": "Login",
+  "loginSubtitle": "Welcome back!",
+  "emailHint": "Email Address",
+  "passwordHint": "Password",
+  "forgotPassword": "Forgot Password?",
+  "orContinueWith": "or continue with",
+  "continueWithGoogle": "Google",
+  "dontHaveAccount": "Don't have an account?",
+  "emailRequiredError": "Please enter your email address.",
+  "emailInvalidError": "Please enter a valid email address.",
+  "passwordRequiredError": "Please enter your password.",
+  "loginNotImplementedNotice": "Login submission is not yet connected.",
+  "socialLoginUnavailableNotice": "Social login is not available in this offline demo.",
+  "forgotPasswordPlaceholderTitle": "Forgot Password",
+  "createAccountTitle": "Create Account",
+  "createAccountSubtitle": "Join JatraNova today",
+  "fullNameHint": "Full Name",
+  "phoneHint": "Phone Number",
+  "agreeTermsPrefix": "I agree to the ",
+  "termsAndConditions": "Terms & Conditions",
+  "alreadyHaveAccount": "Already have an account?",
+  "fullNameRequiredError": "Please enter your full name.",
+  "phoneRequiredError": "Please enter your phone number.",
+  "phoneInvalidError": "Please enter a valid phone number.",
+  "passwordMinLengthError": "Password must be at least 6 characters.",
+  "termsRequiredError": "Please agree to the Terms & Conditions.",
+  "registerNotImplementedNotice": "Account registration is not yet connected.",
+  "resetPasswordTitle": "Reset Your Password",
+  "resetPasswordSubtitle": "Enter your email address and\nwe'll send you a reset link.",
+  "sendResetLink": "Send Reset Link",
+  "backToLogin": "Back to Login",
+  "forgotPasswordNotImplementedNotice": "Password recovery is not implemented yet in this demo.",
+  "greetingMorning": "Good morning,",
+  "greetingAfternoon": "Good afternoon,",
+  "greetingEvening": "Good evening,",
+  "travelerName": "Traveler",
+  "homeHeroSubtitle": "Where do you want to\ngo today?",
+  "fromLabel": "From",
+  "toLabel": "To",
+  "dateLabel": "Date",
+  "passengersLabel": "Passengers",
+  "passengerSingular": "{count} Passenger",
+  "@passengerSingular": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "passengerPlural": "{count} Passengers",
+  "@passengerPlural": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "searchBuses": "Search Buses",
+  "popularRoutes": "Popular Routes",
+  "popularBuses": "Popular Buses",
+  "seeAll": "See All",
+  "demoBadge": "Demo",
+  "fromFare": "From ৳{amount}",
+  "@fromFare": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "seatsAvailable": "{count} Seats Available",
+  "@seatsAvailable": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "connectingJourney": "Connecting\nJourney",
+  "connectingJourneyDesc": "Same-operator hub transfer",
+  "ticketHandover": "Ticket\nHandover",
+  "ticketHandoverDesc": "50% back to exchanger",
+  "navHome": "Home",
+  "navSearch": "Search",
+  "navMyTickets": "My Tickets",
+  "navProfile": "Profile",
+  "selectOriginTitle": "Select Origin",
+  "selectDestinationTitle": "Select Destination",
+  "selectPassengersTitle": "Select Passengers",
+  "sameOriginDestinationError": "Origin and destination cannot be the same.",
+  "pastDateError": "Please select today or a future date.",
+  "retry": "Retry",
+  "done": "Done",
+  "notificationsPlaceholderTitle": "Notifications",
+  "searchResultsPlaceholderTitle": "Search Results",
+  "myTicketsPlaceholderTitle": "My Tickets",
+  "profilePlaceholderTitle": "Profile",
+  "connectingJourneyPlaceholderTitle": "Connecting Journey",
+  "handoverPlaceholderTitle": "Ticket Handover"
 }

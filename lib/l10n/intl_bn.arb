@@ -1,7 +1,140 @@
 {
   "@@locale": "bn",
   "appName": "যাত্রানোভা",
-  "appTagline": "আপনার যাত্রা, সংযুক্ত",
+  "appNameFirst": "যাত্রা",
+  "appNameSecond": "নোভা",
+  "appTagline": "আপনার যাত্রা, সংযুক্ত।",
   "loading": "লোড হচ্ছে...",
-  "errorGeneric": "কিছু একটা সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।"
+  "errorGeneric": "কিছু একটা সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।",
+  "skip": "এড়িয়ে যান",
+  "next": "পরবর্তী",
+  "getStarted": "শুরু করুন",
+  "onboarding1TitlePrefix": "স্মার্ট ভ্রমণ\nভ্রমণ হোক ",
+  "onboarding1TitleHighlight": "আরও ভালো",
+  "onboarding1Subtitle": "সহজে ও আরামে আপনার\nবাসের টিকিট বুক করুন।",
+  "onboarding2TitlePrefix": "নিরাপদ ও নির্ভরযোগ্য\n",
+  "onboarding2TitleHighlight": "যাত্রা",
+  "onboarding2Subtitle": "আত্মবিশ্বাসের সাথে ভ্রমণ করুন\nসারা বাংলাদেশে।",
+  "onboarding2TrustPlatform": "বিশ্বস্ত\nপ্ল্যাটফর্ম",
+  "onboarding2TrustSupport": "২৪/৭\nসহায়তা",
+  "onboarding2TrustPayments": "নিরাপদ\nপেমেন্ট",
+  "onboarding3TitlePrefix": "সহজ ও সংযুক্ত\n",
+  "onboarding3TitleHighlight": "যাত্রাপথ",
+  "onboarding3Subtitle": "সহজেই টিকিট বিনিময় করুন এবং\nবিভিন্ন রুটে নির্বিঘ্নে সংযুক্ত থাকুন।",
+  "chooseLanguageTitle": "ভাষা নির্বাচন করুন",
+  "chooseLanguageSubtitle": "আপনার পছন্দের ভাষা নির্বাচন করুন",
+  "languageEnglish": "English",
+  "languageBangla": "বাংলা",
+  "continueLabel": "চালিয়ে যান",
+  "welcomePlaceholderTitle": "যাত্রানোভায় স্বাগতম",
+  "welcomePlaceholderSubtitle": "পরবর্তী ধাপে স্বাগতম স্ক্রিন যুক্ত করা হবে।",
+  "welcomeTitle": "যাত্রানোভায়\nস্বাগতম",
+  "welcomeSubtitle": "সহজেই আপনার যাত্রা বুক,\nট্র্যাক ও পরিচালনা করুন।",
+  "login": "লগইন",
+  "register": "নিবন্ধন",
+  "orDivider": "অথবা",
+  "continueAsGuest": "অতিথি হিসেবে চালিয়ে যান",
+  "loginPlaceholderTitle": "লগইন",
+  "registerPlaceholderTitle": "নিবন্ধন",
+  "guestHomePlaceholderTitle": "অতিথি হোম",
+  "comingSoonSubtitle": "এই স্ক্রিনটি পরবর্তী ধাপে যুক্ত করা হবে।",
+  "loginTitle": "লগইন",
+  "loginSubtitle": "আবার স্বাগতম!",
+  "emailHint": "ইমেইল ঠিকানা",
+  "passwordHint": "পাসওয়ার্ড",
+  "forgotPassword": "পাসওয়ার্ড ভুলে গেছেন?",
+  "orContinueWith": "অথবা চালিয়ে যান",
+  "continueWithGoogle": "Google",
+  "dontHaveAccount": "অ্যাকাউন্ট নেই?",
+  "emailRequiredError": "অনুগ্রহ করে আপনার ইমেইল ঠিকানা দিন।",
+  "emailInvalidError": "অনুগ্রহ করে একটি বৈধ ইমেইল ঠিকানা দিন।",
+  "passwordRequiredError": "অনুগ্রহ করে আপনার পাসওয়ার্ড দিন।",
+  "loginNotImplementedNotice": "লগইন যাচাইকরণ এখনো যুক্ত করা হয়নি।",
+  "socialLoginUnavailableNotice": "এই অফলাইন ডেমোতে সোশ্যাল লগইন উপলব্ধ নয়।",
+  "forgotPasswordPlaceholderTitle": "পাসওয়ার্ড রিসেট",
+  "createAccountTitle": "অ্যাকাউন্ট তৈরি করুন",
+  "createAccountSubtitle": "আজই যাত্রানোভায় যোগ দিন",
+  "fullNameHint": "পূর্ণ নাম",
+  "phoneHint": "ফোন নম্বর",
+  "agreeTermsPrefix": "আমি ",
+  "termsAndConditions": "শর্তাবলীতে সম্মত",
+  "alreadyHaveAccount": "ইতিমধ্যে অ্যাকাউন্ট আছে?",
+  "fullNameRequiredError": "অনুগ্রহ করে আপনার পূর্ণ নাম দিন।",
+  "phoneRequiredError": "অনুগ্রহ করে আপনার ফোন নম্বর দিন।",
+  "phoneInvalidError": "অনুগ্রহ করে একটি বৈধ ফোন নম্বর দিন।",
+  "passwordMinLengthError": "পাসওয়ার্ড কমপক্ষে ৬ অক্ষরের হতে হবে।",
+  "termsRequiredError": "অনুগ্রহ করে শর্তাবলীতে সম্মত হন।",
+  "registerNotImplementedNotice": "অ্যাকাউন্ট নিবন্ধন এখনো যুক্ত করা হয়নি।",
+  "resetPasswordTitle": "পাসওয়ার্ড রিসেট করুন",
+  "resetPasswordSubtitle": "আপনার ইমেইল ঠিকানা দিন এবং\nআমরা আপনাকে একটি রিসেট লিংক পাঠাব।",
+  "sendResetLink": "রিসেট লিংক পাঠান",
+  "backToLogin": "লগইনে ফিরে যান",
+  "forgotPasswordNotImplementedNotice": "এই ডেমোতে পাসওয়ার্ড পুনরুদ্ধার এখনো যুক্ত করা হয়নি।",
+  "greetingMorning": "শুভ সকাল,",
+  "greetingAfternoon": "শুভ অপরাহ্ণ,",
+  "greetingEvening": "শুভ সন্ধ্যা,",
+  "travelerName": "ভ্রমণকারী",
+  "homeHeroSubtitle": "আজ আপনি কোথায়\nযেতে চান?",
+  "fromLabel": "কোথা থেকে",
+  "toLabel": "কোথায় যাবেন",
+  "dateLabel": "তারিখ",
+  "passengersLabel": "যাত্রী",
+  "passengerSingular": "{count} জন যাত্রী",
+  "@passengerSingular": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "passengerPlural": "{count} জন যাত্রী",
+  "@passengerPlural": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "searchBuses": "বাস খুঁজুন",
+  "popularRoutes": "জনপ্রিয় রুট",
+  "popularBuses": "জনপ্রিয় বাস",
+  "seeAll": "সব দেখুন",
+  "demoBadge": "ডেমো",
+  "fromFare": "৳{amount} থেকে",
+  "@fromFare": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "seatsAvailable": "{count}টি আসন খালি",
+  "@seatsAvailable": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "connectingJourney": "সংযুক্ত\nযাত্রা",
+  "connectingJourneyDesc": "একই অপারেটরে হাব ট্রান্সফার",
+  "ticketHandover": "টিকিট\nহস্তান্তর",
+  "ticketHandoverDesc": "৫০% ফেরত পাবেন হস্তান্তরকারী",
+  "navHome": "হোম",
+  "navSearch": "খুঁজুন",
+  "navMyTickets": "আমার টিকিট",
+  "navProfile": "প্রোফাইল",
+  "selectOriginTitle": "যাত্রা শুরুর স্থান",
+  "selectDestinationTitle": "গন্তব্য স্থান",
+  "selectPassengersTitle": "যাত্রী সংখ্যা নির্বাচন",
+  "sameOriginDestinationError": "শুরু এবং গন্তব্য স্থান একই হতে পারবে না।",
+  "pastDateError": "অনুগ্রহ করে আজ বা পরবর্তী তারিখ নির্বাচন করুন।",
+  "retry": "আবার চেষ্টা করুন",
+  "done": "সম্পন্ন",
+  "notificationsPlaceholderTitle": "বিজ্ঞপ্তি",
+  "searchResultsPlaceholderTitle": "অনুসন্ধানের ফলাফল",
+  "myTicketsPlaceholderTitle": "আমার টিকিট",
+  "profilePlaceholderTitle": "প্রোফাইল",
+  "connectingJourneyPlaceholderTitle": "সংযুক্ত যাত্রা",
+  "handoverPlaceholderTitle": "টিকিট হস্তান্তর"
 }

@@ -35,8 +35,13 @@ void main() {
 
   testWidgets('JatraNovaApp boots with light theme and English default locale',
       (WidgetTester tester) async {
+    tester.view.physicalSize = const Size(1125, 2436);
+    tester.view.devicePixelRatio = 3.0;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
     await tester.pumpWidget(const JatraNovaApp());
-    await tester.pumpAndSettle();
+    await tester.pump();
 
     final materialApp = tester.widget<MaterialApp>(find.byType(MaterialApp));
     expect(materialApp.themeMode, ThemeMode.light);
@@ -48,5 +53,8 @@ void main() {
 
     final context = tester.element(find.byType(Scaffold));
     expect(AppLocalizations.of(context)?.appName, 'JatraNova');
+
+    await tester.pump(const Duration(milliseconds: 1600));
+    await tester.pumpAndSettle();
   });
 }
