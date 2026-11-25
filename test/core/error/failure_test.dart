@@ -3,18 +3,25 @@ import 'package:jatra_nova/core/error/failure.dart';
 
 void main() {
   group('Failure', () {
-    test('supports value comparisons via Equatable', () {
-      const failure1 = Failure(type: FailureType.database, debugMessage: 'DB error');
-      const failure2 = Failure(type: FailureType.database, debugMessage: 'DB error');
-      const failure3 = Failure(type: FailureType.notFound, debugMessage: 'Not found');
+    test('supports value equality via Equatable', () {
+      const a = Failure(
+        type: FailureType.validation,
+        debugMessage: 'Invalid input',
+        code: 'VAL_01',
+      );
+      const b = Failure(
+        type: FailureType.validation,
+        debugMessage: 'Invalid input',
+        code: 'VAL_01',
+      );
+      const c = Failure(
+        type: FailureType.conflict,
+        debugMessage: 'Invalid input',
+        code: 'VAL_01',
+      );
 
-      expect(failure1, equals(failure2));
-      expect(failure1, isNot(equals(failure3)));
-    });
-
-    test('props includes type and debugMessage', () {
-      const failure = Failure(type: FailureType.conflict, debugMessage: 'conflict');
-      expect(failure.props, [FailureType.conflict, 'conflict']);
+      expect(a, equals(b));
+      expect(a, isNot(equals(c)));
     });
   });
 }

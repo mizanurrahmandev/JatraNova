@@ -1,7 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter/widgets.dart';
-import 'package:jatra_nova/l10n/app_localizations.dart';
 
+/// Categories of domain and data failures used for branching in UI and BLoCs.
 enum FailureType {
   database,
   notFound,
@@ -13,42 +12,18 @@ enum FailureType {
   unknown,
 }
 
+/// Base failure value object returned inside `Either<Failure, T>`.
 class Failure extends Equatable {
-  final FailureType type;
-  final String debugMessage;
-
   const Failure({
     required this.type,
-    this.debugMessage = '',
+    this.debugMessage,
+    this.code,
   });
 
-  String toLocalizedMessage(BuildContext context) {
-    final l10n = AppLocalizations.of(context);
-    if (l10n == null) return debugMessage.isNotEmpty ? debugMessage : type.name;
-
-    switch (type) {
-      case FailureType.database:
-        return l10n.error_database;
-      case FailureType.notFound:
-        return l10n.error_not_found;
-      case FailureType.validation:
-        return l10n.error_validation;
-      case FailureType.conflict:
-        return l10n.error_conflict;
-      case FailureType.holdExpired:
-        return l10n.error_hold_expired;
-      case FailureType.notEligible:
-        return l10n.error_not_eligible;
-      case FailureType.unauthorized:
-        return l10n.error_unauthorized;
-      case FailureType.unknown:
-        return l10n.error_unknown;
-    }
-  }
+  final FailureType type;
+  final String? debugMessage;
+  final String? code;
 
   @override
-  List<Object?> get props => [type, debugMessage];
-
-  @override
-  String toString() => 'Failure(type: $type, message: $debugMessage)';
+  List<Object?> get props => <Object?>[type, debugMessage, code];
 }

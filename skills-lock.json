@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "skills": {
+    "flutter-add-widget-test": {
+      "source": "flutter/agent-plugins",
+      "commit": "ff6d472ee66dbed566c4500edee460c94fde0a02",
+      "sourceType": "github",
+      "skillPath": "skills/flutter-add-widget-test/SKILL.md",
+      "computedHash": "5cfab5fd20d6b84e28e9b9cc278ac0c3fb2c89a7e850f2b900749b14cb367bbf"
+    },
+    "flutter-apply-architecture-best-practices": {
+      "source": "flutter/agent-plugins",
+      "commit": "ff6d472ee66dbed566c4500edee460c94fde0a02",
+      "sourceType": "github",
+      "skillPath": "skills/flutter-apply-architecture-best-practices/SKILL.md",
+      "computedHash": "a41b999109cc3c2dc79ddbc05b5fd5f39ed08d5c6c17dab728a6b926d3a504de"
+    },
+    "flutter-build-responsive-layout": {
+      "source": "flutter/agent-plugins",
+      "commit": "ff6d472ee66dbed566c4500edee460c94fde0a02",
+      "sourceType": "github",
+      "skillPath": "skills/flutter-build-responsive-layout/SKILL.md",
+      "computedHash": "bdb7ab7ca812ee719237a718376a5f2e15b659201ff66818f1012c5d13751487"
+    },
+    "flutter-fix-layout-issues": {
+      "source": "flutter/agent-plugins",
+      "commit": "ff6d472ee66dbed566c4500edee460c94fde0a02",
+      "sourceType": "github",
+      "skillPath": "skills/flutter-fix-layout-issues/SKILL.md",
+      "computedHash": "66c9d468f894704bfd760c9c6f60651e634fadb099f1977ab9d4e2bf73eb5fc1"
+    },
+    "flutter-setup-declarative-routing": {
+      "source": "flutter/agent-plugins",
+      "commit": "ff6d472ee66dbed566c4500edee460c94fde0a02",
+      "sourceType": "github",
+      "skillPath": "skills/flutter-setup-declarative-routing/SKILL.md",
+      "computedHash": "566264ee0f746a8b4d571a0dec69d3d3f09c246591a3393d1fb67783661465bf"
+    },
+    "flutter-setup-localization": {
+      "source": "flutter/agent-plugins",
+      "commit": "ff6d472ee66dbed566c4500edee460c94fde0a02",
+      "sourceType": "github",
+      "skillPath": "skills/flutter-setup-localization/SKILL.md",
+      "computedHash": "4b4214e30accca0601e7f1d929a44caaa126fe9440d80463198e6ab10e23cdc7"
+    }
+  }
+}
