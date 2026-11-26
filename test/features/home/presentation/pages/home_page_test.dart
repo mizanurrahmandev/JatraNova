@@ -11,9 +11,7 @@ import 'package:jatra_nova/core/utils/preferences_service.dart';
 import 'package:jatra_nova/core/utils/session_bloc.dart';
 import 'package:jatra_nova/core/utils/session_event.dart';
 import 'package:jatra_nova/features/authentication/presentation/pages/login_page.dart';
-import 'package:jatra_nova/features/authentication/presentation/pages/welcome_page.dart';
 import 'package:jatra_nova/features/home/presentation/pages/home_page.dart';
-import 'package:jatra_nova/features/onboarding/presentation/pages/language_selection_page.dart';
 import 'package:jatra_nova/features/onboarding/presentation/pages/splash_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
@@ -67,69 +65,72 @@ void main() {
     expect(find.byType(SplashPage), findsOneWidget);
 
     await tester.pump(const Duration(milliseconds: 1600));
-    await tester.pumpAndSettle();
-    expect(find.byType(LanguageSelectionPage), findsOneWidget);
-
-    await tester.tap(find.byKey(const Key('language_continue_button')));
-    await tester.pumpAndSettle();
-    expect(find.byType(WelcomePage), findsOneWidget);
-
-    await tester.tap(find.byKey(const Key('welcome_guest_button')));
-    await tester.pump();
     await tester.runAsync(
       () => Future<void>.delayed(const Duration(milliseconds: 300)),
     );
     await tester.pumpAndSettle();
     expect(find.byType(HomePage), findsOneWidget);
+    expect(
+      getIt<AppRoute>().router.routeInformationProvider.value.uri.path,
+      RoutePath.guestHome,
+    );
   }
 
   testWidgets(
-      'HomePage renders guest greeting, search card, popular routes, popular buses with seats, feature cards, and 4-tab bottom nav in English',
-      (WidgetTester tester) async {
-    await pumpToHomePage(tester);
+    'HomePage renders guest greeting, search card, popular routes, popular buses with seats, feature cards, and 4-tab bottom nav in English',
+    (WidgetTester tester) async {
+      await pumpToHomePage(tester);
 
-    expect(find.byKey(const Key('home_greeting_text')), findsOneWidget);
-    expect(
-      find.byKey(const Key('home_hero_bus_illustration')),
-      findsOneWidget,
-    );
-    final busTopLeft = tester.getTopLeft(
-      find.byKey(const Key('home_hero_bus_illustration')),
-    );
-    final searchCardTopLeft = tester.getTopLeft(
-      find.byKey(const Key('home_from_field')),
-    );
-    expect(busTopLeft.dy, lessThan(searchCardTopLeft.dy));
-    expect(find.textContaining('Traveler!'), findsOneWidget);
-    expect(find.byKey(const Key('home_from_field')), findsOneWidget);
-    expect(find.byKey(const Key('home_to_field')), findsOneWidget);
-    expect(find.text('Dhaka'), findsOneWidget);
-    expect(find.text('Chattogram'), findsOneWidget);
-    expect(find.byKey(const Key('home_swap_button')), findsOneWidget);
-    expect(find.byKey(const Key('home_date_field')), findsOneWidget);
-    expect(find.byKey(const Key('home_passengers_field')), findsOneWidget);
-    expect(find.text('1 Passenger'), findsOneWidget);
-    expect(find.byKey(const Key('home_search_button')), findsOneWidget);
-    expect(find.text('Search Buses'), findsOneWidget);
+      expect(find.byKey(const Key('home_greeting_text')), findsOneWidget);
+      expect(
+        find.byKey(const Key('home_hero_bus_illustration')),
+        findsOneWidget,
+      );
+      final busTopLeft = tester.getTopLeft(
+        find.byKey(const Key('home_hero_bus_illustration')),
+      );
+      final searchCardTopLeft = tester.getTopLeft(
+        find.byKey(const Key('home_from_field')),
+      );
+      expect(busTopLeft.dy, lessThan(searchCardTopLeft.dy));
+      expect(find.textContaining('Traveler!'), findsOneWidget);
+      expect(find.byKey(const Key('home_from_field')), findsOneWidget);
+      expect(find.byKey(const Key('home_to_field')), findsOneWidget);
+      expect(find.text('Dhaka'), findsOneWidget);
+      expect(find.text('Chattogram'), findsOneWidget);
+      expect(find.byKey(const Key('home_swap_button')), findsOneWidget);
+      expect(find.byKey(const Key('home_date_field')), findsOneWidget);
+      expect(find.byKey(const Key('home_passengers_field')), findsOneWidget);
+      expect(find.text('1 Passenger'), findsOneWidget);
+      expect(find.byKey(const Key('home_search_button')), findsOneWidget);
+      expect(find.text('Search Buses'), findsOneWidget);
 
-    expect(find.text('Popular Routes'), findsOneWidget);
-    expect(find.text('Popular Buses'), findsOneWidget);
-    expect(find.text('Demo'), findsOneWidget);
-    expect(find.textContaining('Seats Available'), findsWidgets);
+      expect(find.text('Popular Routes'), findsOneWidget);
+      expect(find.text('Popular Buses'), findsOneWidget);
+      expect(find.text('Demo'), findsOneWidget);
+      expect(find.textContaining('Seats Available'), findsWidgets);
 
-    expect(find.byKey(const Key('home_connecting_journey_card')), findsOneWidget);
-    expect(find.byKey(const Key('home_ticket_handover_card')), findsOneWidget);
+      expect(
+        find.byKey(const Key('home_connecting_journey_card')),
+        findsOneWidget,
+      );
+      expect(
+        find.byKey(const Key('home_ticket_exchange_card')),
+        findsOneWidget,
+      );
 
-    expect(find.byKey(const Key('home_bottom_nav')), findsOneWidget);
-    expect(find.text('Home'), findsOneWidget);
-    expect(find.text('Search'), findsOneWidget);
-    expect(find.text('My Tickets'), findsOneWidget);
-    expect(find.text('Profile'), findsOneWidget);
-    expect(tester.takeException(), isNull);
-  });
+      expect(find.byKey(const Key('home_bottom_nav')), findsOneWidget);
+      expect(find.text('Home'), findsOneWidget);
+      expect(find.text('Search'), findsOneWidget);
+      expect(find.text('My Tickets'), findsOneWidget);
+      expect(find.text('Profile'), findsOneWidget);
+      expect(tester.takeException(), isNull);
+    },
+  );
 
-  testWidgets('HomePage renders expected localized text in Bangla',
-      (WidgetTester tester) async {
+  testWidgets('HomePage renders expected localized text in Bangla', (
+    WidgetTester tester,
+  ) async {
     await pumpToHomePage(tester, languageCode: 'bn');
 
     expect(find.textContaining('ভ্রমণকারী!'), findsOneWidget);
@@ -147,8 +148,9 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('HomePage displays authenticated passenger name when signed in',
-      (WidgetTester tester) async {
+  testWidgets('HomePage displays authenticated passenger name when signed in', (
+    WidgetTester tester,
+  ) async {
     final db = getIt<Database>();
     await tester.runAsync(() async {
       await db.insert(DbTables.users, <String, Object?>{
@@ -185,109 +187,109 @@ void main() {
     expect(find.textContaining('Rahim Uddin!'), findsOneWidget);
   });
 
-  testWidgets('swapping locations and selecting passengers update search card',
-      (WidgetTester tester) async {
-    await pumpToHomePage(tester);
+  testWidgets(
+    'swapping locations and selecting passengers update search card',
+    (WidgetTester tester) async {
+      await pumpToHomePage(tester);
 
-    await tester.tap(find.byKey(const Key('home_swap_button')));
-    await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('home_swap_button')));
+      await tester.pumpAndSettle();
 
-    // After swap, From is Chattogram and To is Dhaka.
-    expect(
-      find.descendant(
-        of: find.byKey(const Key('home_from_field')),
-        matching: find.text('Chattogram'),
-      ),
-      findsOneWidget,
-    );
-    expect(
-      find.descendant(
-        of: find.byKey(const Key('home_to_field')),
-        matching: find.text('Dhaka'),
-      ),
-      findsOneWidget,
-    );
+      // After swap, From is Chattogram and To is Dhaka.
+      expect(
+        find.descendant(
+          of: find.byKey(const Key('home_from_field')),
+          matching: find.text('Chattogram'),
+        ),
+        findsOneWidget,
+      );
+      expect(
+        find.descendant(
+          of: find.byKey(const Key('home_to_field')),
+          matching: find.text('Dhaka'),
+        ),
+        findsOneWidget,
+      );
 
-    await tester.tap(find.byKey(const Key('home_passengers_field')));
-    await tester.pumpAndSettle();
-    await tester.tap(find.byKey(const Key('passenger_increment_button')));
-    await tester.pump();
-    await tester.tap(find.byKey(const Key('passenger_done_button')));
-    await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('home_passengers_field')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('passenger_increment_button')));
+      await tester.pump();
+      await tester.tap(find.byKey(const Key('passenger_done_button')));
+      await tester.pumpAndSettle();
 
-    expect(find.text('2 Passengers'), findsOneWidget);
-  });
+      expect(find.text('2 Passengers'), findsOneWidget);
+    },
+  );
 
   testWidgets(
-      'guest tapping My Tickets or Profile redirects to LoginPage; Search and feature cards navigate cleanly',
-      (WidgetTester tester) async {
-    await pumpToHomePage(tester);
+    'guest tapping My Tickets or Profile redirects to LoginPage; Search and feature cards navigate cleanly',
+    (WidgetTester tester) async {
+      await pumpToHomePage(tester);
 
-    await tester.tap(find.text('My Tickets'));
-    await tester.pumpAndSettle();
-    expect(find.byType(LoginPage), findsOneWidget);
+      await tester.tap(find.text('My Tickets'));
+      await tester.pumpAndSettle();
+      expect(find.byType(LoginPage), findsOneWidget);
 
-    getIt<AppRoute>().router.go(RoutePath.guestHome);
-    await tester.pump();
-    await tester.runAsync(
-      () => Future<void>.delayed(const Duration(milliseconds: 100)),
-    );
-    await tester.pumpAndSettle();
-    await tester.tap(find.text('Profile'));
-    await tester.pumpAndSettle();
-    expect(find.byType(LoginPage), findsOneWidget);
-
-    getIt<AppRoute>().router.go(RoutePath.guestHome);
-    await tester.pump();
-    await tester.runAsync(
-      () => Future<void>.delayed(const Duration(milliseconds: 100)),
-    );
-    await tester.pumpAndSettle();
-    await tester.tap(find.text('Search'));
-    await tester.pumpAndSettle();
-    expect(
-      getIt<AppRoute>().router.routeInformationProvider.value.uri.path,
-      RoutePath.search,
-    );
-
-    getIt<AppRoute>().router.go(RoutePath.guestHome);
-    await tester.pump();
-    await tester.runAsync(
-      () => Future<void>.delayed(const Duration(milliseconds: 100)),
-    );
-    await tester.pumpAndSettle();
-    await tester.tap(find.byKey(const Key('home_search_button')));
-    await tester.pumpAndSettle();
-    expect(
-      getIt<AppRoute>().router.routeInformationProvider.value.uri.path,
-      RoutePath.searchResults,
-    );
-  });
-
-  testWidgets('HomePage renders without overflow on small and landscape viewports',
-      (WidgetTester tester) async {
-    for (final size in const <Size>[
-      Size(320, 568),
-      Size(800, 600),
-    ]) {
-      setViewport(tester, size: size, dpr: 1.0);
-      await tester.pumpWidget(
-        const JatraNovaApp(),
-      );
-      await tester.pump();
-      await tester.pump(const Duration(milliseconds: 1600));
-      await tester.runAsync(
-        () => Future<void>.delayed(const Duration(milliseconds: 250)),
-      );
       getIt<AppRoute>().router.go(RoutePath.guestHome);
       await tester.pump();
       await tester.runAsync(
-        () => Future<void>.delayed(const Duration(milliseconds: 250)),
+        () => Future<void>.delayed(const Duration(milliseconds: 100)),
       );
       await tester.pumpAndSettle();
+      await tester.tap(find.text('Profile'));
+      await tester.pumpAndSettle();
+      expect(find.byType(LoginPage), findsOneWidget);
 
-      expect(find.byType(HomePage), findsOneWidget);
-      expect(tester.takeException(), isNull);
-    }
-  });
+      getIt<AppRoute>().router.go(RoutePath.guestHome);
+      await tester.pump();
+      await tester.runAsync(
+        () => Future<void>.delayed(const Duration(milliseconds: 100)),
+      );
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Search'));
+      await tester.pumpAndSettle();
+      expect(
+        getIt<AppRoute>().router.routeInformationProvider.value.uri.path,
+        RoutePath.search,
+      );
+
+      getIt<AppRoute>().router.go(RoutePath.guestHome);
+      await tester.pump();
+      await tester.runAsync(
+        () => Future<void>.delayed(const Duration(milliseconds: 100)),
+      );
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('home_search_button')));
+      await tester.pumpAndSettle();
+      expect(
+        getIt<AppRoute>().router.routeInformationProvider.value.uri.path,
+        RoutePath.searchResults,
+      );
+    },
+  );
+
+  testWidgets(
+    'HomePage renders without overflow on small and landscape viewports',
+    (WidgetTester tester) async {
+      for (final size in const <Size>[Size(320, 568), Size(800, 600)]) {
+        setViewport(tester, size: size, dpr: 1.0);
+        await tester.pumpWidget(const JatraNovaApp());
+        await tester.pump();
+        await tester.pump(const Duration(milliseconds: 1600));
+        await tester.runAsync(
+          () => Future<void>.delayed(const Duration(milliseconds: 250)),
+        );
+        getIt<AppRoute>().router.go(RoutePath.guestHome);
+        await tester.pump();
+        await tester.runAsync(
+          () => Future<void>.delayed(const Duration(milliseconds: 250)),
+        );
+        await tester.pumpAndSettle();
+
+        expect(find.byType(HomePage), findsOneWidget);
+        expect(tester.takeException(), isNull);
+      }
+    },
+  );
 }

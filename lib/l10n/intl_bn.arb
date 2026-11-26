@@ -66,10 +66,10 @@
   "termsRequiredError": "অনুগ্রহ করে শর্তাবলীতে সম্মত হন।",
   "registerNotImplementedNotice": "অ্যাকাউন্ট নিবন্ধন এখনো যুক্ত করা হয়নি।",
   "resetPasswordTitle": "পাসওয়ার্ড রিসেট করুন",
-  "resetPasswordSubtitle": "আপনার ইমেইল ঠিকানা দিন এবং\nআমরা আপনাকে একটি রিসেট লিংক পাঠাব।",
-  "sendResetLink": "রিসেট লিংক পাঠান",
+  "resetPasswordSubtitle": "এই স্থানীয় ডেমোতে পাসওয়ার্ড পুনরুদ্ধার\nসক্রিয় নয়। প্রিভিউ দেখতে ইমেইল দিন।",
+  "sendResetLink": "চালিয়ে যান (ডেমো)",
   "backToLogin": "লগইনে ফিরে যান",
-  "forgotPasswordNotImplementedNotice": "এই ডেমোতে পাসওয়ার্ড পুনরুদ্ধার এখনো যুক্ত করা হয়নি।",
+  "forgotPasswordNotImplementedNotice": "এই অফলাইন ডেমোতে পাসওয়ার্ড পুনরুদ্ধার উপলব্ধ নয়। কোনো ইমেইল পাঠানো হয়নি।",
   "greetingMorning": "শুভ সকাল,",
   "greetingAfternoon": "শুভ অপরাহ্ণ,",
   "greetingEvening": "শুভ সন্ধ্যা,",
@@ -118,7 +118,7 @@
   },
   "connectingJourney": "সংযুক্ত\nযাত্রা",
   "connectingJourneyDesc": "একই অপারেটরে হাব ট্রান্সফার",
-  "ticketHandover": "টিকিট\nহস্তান্তর",
+  "ticketHandover": "টিকিট\nবিনিময়",
   "ticketHandoverDesc": "৫০% ফেরত পাবেন হস্তান্তরকারী",
   "navHome": "হোম",
   "navSearch": "খুঁজুন",
@@ -136,5 +136,5 @@
   "myTicketsPlaceholderTitle": "আমার টিকিট",
   "profilePlaceholderTitle": "প্রোফাইল",
   "connectingJourneyPlaceholderTitle": "সংযুক্ত যাত্রা",
-  "handoverPlaceholderTitle": "টিকিট হস্তান্তর"
+  "handoverPlaceholderTitle": "টিকিট বিনিময়"
 }

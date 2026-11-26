@@ -38,6 +38,7 @@ flutter:
   assets:
     - assets/backgrounds/splash_background.jpg
     - assets/images/bus_logo.png
+    - assets/images/bus_icon.jpg
     - assets/images/google_logo.png
     - assets/backgrounds/background_onboarding.jpg
     - assets/backgrounds/background_langulage.jpg
@@ -47,3 +48,4 @@ flutter:
     - assets/illustrations/illustration_2.png
     - assets/illustrations/illustration_3.png
     - assets/illustrations/email_illustration.png
+    - assets/illustrations/bus_illustration.png

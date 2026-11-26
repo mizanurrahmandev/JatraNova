@@ -26,6 +26,8 @@ abstract final class AppAssets {
       'assets/illustrations/illustration_3.png';
   static const String emailIllustration =
       'assets/illustrations/email_illustration.png';
+  static const String busIllustration =
+      'assets/illustrations/bus_illustration.png';
 
   // ── Images ───────────────────────────────────────────────────────────
 

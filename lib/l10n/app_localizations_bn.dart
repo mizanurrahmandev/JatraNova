@@ -215,17 +215,17 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get resetPasswordSubtitle =>
-      'আপনার ইমেইল ঠিকানা দিন এবং\nআমরা আপনাকে একটি রিসেট লিংক পাঠাব।';
+      'এই স্থানীয় ডেমোতে পাসওয়ার্ড পুনরুদ্ধার\nসক্রিয় নয়। প্রিভিউ দেখতে ইমেইল দিন।';
 
   @override
-  String get sendResetLink => 'রিসেট লিংক পাঠান';
+  String get sendResetLink => 'চালিয়ে যান (ডেমো)';
 
   @override
   String get backToLogin => 'লগইনে ফিরে যান';
 
   @override
   String get forgotPasswordNotImplementedNotice =>
-      'এই ডেমোতে পাসওয়ার্ড পুনরুদ্ধার এখনো যুক্ত করা হয়নি।';
+      'এই অফলাইন ডেমোতে পাসওয়ার্ড পুনরুদ্ধার উপলব্ধ নয়। কোনো ইমেইল পাঠানো হয়নি।';
 
   @override
   String get greetingMorning => 'শুভ সকাল,';
@@ -296,7 +296,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get connectingJourneyDesc => 'একই অপারেটরে হাব ট্রান্সফার';
 
   @override
-  String get ticketHandover => 'টিকিট\nহস্তান্তর';
+  String get ticketHandover => 'টিকিট\nবিনিময়';
 
   @override
   String get ticketHandoverDesc => '৫০% ফেরত পাবেন হস্তান্তরকারী';
@@ -351,5 +351,5 @@ class AppLocalizationsBn extends AppLocalizations {
   String get connectingJourneyPlaceholderTitle => 'সংযুক্ত যাত্রা';
 
   @override
-  String get handoverPlaceholderTitle => 'টিকিট হস্তান্তর';
+  String get handoverPlaceholderTitle => 'টিকিট বিনিময়';
 }

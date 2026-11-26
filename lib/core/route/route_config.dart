@@ -26,7 +26,7 @@ import 'package:jatra_nova/l10n/app_localizations.dart';
 @singleton
 class AppRoute {
   AppRoute(this._sessionBloc)
-      : _refreshListenable = _BlocRefreshListenable(_sessionBloc.stream) {
+    : _refreshListenable = _BlocRefreshListenable(_sessionBloc.stream) {
     router = GoRouter(
       initialLocation: RoutePath.splash,
       refreshListenable: _refreshListenable,
@@ -41,17 +41,15 @@ class AppRoute {
         if (!sessionState.isAuthenticated &&
             (location == RoutePath.home ||
                 location == RoutePath.myTickets ||
-                location == RoutePath.profile)) {
+                location == RoutePath.profile ||
+                location == RoutePath.notifications)) {
           return RoutePath.login;
         }
 
         return null;
       },
       routes: <RouteBase>[
-        GoRoute(
-          path: RoutePath.splash,
-          builder: (_, _) => const SplashPage(),
-        ),
+        GoRoute(path: RoutePath.splash, builder: (_, _) => const SplashPage()),
         GoRoute(
           path: RoutePath.onboarding,
           builder: (_, _) => const OnboardingPage1(),
@@ -72,10 +70,7 @@ class AppRoute {
           path: RoutePath.welcome,
           builder: (_, _) => const WelcomePage(),
         ),
-        GoRoute(
-          path: RoutePath.login,
-          builder: (_, _) => const LoginPage(),
-        ),
+        GoRoute(path: RoutePath.login, builder: (_, _) => const LoginPage()),
         GoRoute(
           path: RoutePath.forgotPassword,
           builder: (_, _) => const ForgotPasswordPage(),
@@ -84,14 +79,8 @@ class AppRoute {
           path: RoutePath.register,
           builder: (_, _) => const RegisterPage(),
         ),
-        GoRoute(
-          path: RoutePath.guestHome,
-          builder: (_, _) => const HomePage(),
-        ),
-        GoRoute(
-          path: RoutePath.home,
-          builder: (_, _) => const HomePage(),
-        ),
+        GoRoute(path: RoutePath.guestHome, builder: (_, _) => const HomePage()),
+        GoRoute(path: RoutePath.home, builder: (_, _) => const HomePage()),
         GoRoute(
           path: RoutePath.search,
           builder: (BuildContext context, _) => _TemporaryDestinationPage(
@@ -125,12 +114,13 @@ class AppRoute {
         GoRoute(
           path: RoutePath.connectingJourney,
           builder: (BuildContext context, _) => _TemporaryDestinationPage(
-            title:
-                AppLocalizations.of(context)!.connectingJourneyPlaceholderTitle,
+            title: AppLocalizations.of(
+              context,
+            )!.connectingJourneyPlaceholderTitle,
           ),
         ),
         GoRoute(
-          path: RoutePath.handover,
+          path: RoutePath.exchange,
           builder: (BuildContext context, _) => _TemporaryDestinationPage(
             title: AppLocalizations.of(context)!.handoverPlaceholderTitle,
           ),
@@ -171,17 +161,17 @@ class _TemporaryDestinationPage extends StatelessWidget {
                   title,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                        color: AppColors.onboardingHeadingNavy,
-                        fontWeight: FontWeight.w700,
-                      ),
+                    color: AppColors.onboardingHeadingNavy,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
                 AppSpacing.verticalSm,
                 Text(
                   l10n.comingSoonSubtitle,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        color: AppColors.onboardingSubtitleSlate,
-                      ),
+                    color: AppColors.onboardingSubtitleSlate,
+                  ),
                 ),
               ],
             ),
@@ -225,5 +215,5 @@ abstract final class RoutePath {
   static const String profile = '/profile';
   static const String notifications = '/notifications';
   static const String connectingJourney = '/connecting-journey';
-  static const String handover = '/handover';
+  static const String exchange = '/handover';
 }

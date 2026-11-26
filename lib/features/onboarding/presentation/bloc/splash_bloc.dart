@@ -13,10 +13,8 @@ import 'package:jatra_nova/features/onboarding/presentation/bloc/splash_state.da
 /// - Returning launch without signed-in session -> Guest Home
 @injectable
 class SplashBloc extends Bloc<SplashEvent, SplashState> {
-  SplashBloc(
-    this._preferencesService,
-    this._sessionBloc,
-  ) : super(const SplashLoading()) {
+  SplashBloc(this._preferencesService, this._sessionBloc)
+    : super(const SplashLoading()) {
     on<SplashStarted>(_onSplashStarted);
   }
 
@@ -46,7 +44,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     if (_sessionBloc.state.isAuthenticated) {
       emit(const SplashNavigationReady(SplashDestination.signedInHome));
     } else {
-      emit(const SplashNavigationReady(SplashDestination.languageSelection));
+      emit(const SplashNavigationReady(SplashDestination.guestHome));
     }
   }
 }

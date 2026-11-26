@@ -551,13 +551,13 @@ class _HomeView extends StatelessWidget {
                           AppSpacing.horizontalMd,
                           Expanded(
                             child: _FeatureShortcutCard(
-                              cardKey: const Key('home_ticket_handover_card'),
+                              cardKey: const Key('home_ticket_exchange_card'),
                               icon: Icons.handshake_rounded,
                               iconColor: AppColors.accent,
                               iconBg: AppColors.homeIconBgTeal,
                               title: l10n.ticketHandover,
                               subtitle: l10n.ticketHandoverDesc,
-                              onTap: () => context.go(RoutePath.handover),
+                              onTap: () => context.go(RoutePath.exchange),
                             ),
                           ),
                         ],
@@ -806,7 +806,7 @@ class _HomeHeroContent extends StatelessWidget {
               ),
               AppSpacing.horizontalSm,
               Image.asset(
-                AppAssets.busLogo,
+                AppAssets.busIllustration,
                 key: const Key('home_hero_bus_illustration'),
                 width: 148.w,
                 fit: BoxFit.contain,

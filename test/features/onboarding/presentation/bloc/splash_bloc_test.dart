@@ -26,44 +26,49 @@ void main() {
   });
 
   group('SplashBloc', () {
-    test('routes to onboarding on first launch when onboardingCompleted is false',
-        () async {
-      splashBloc.add(const SplashStarted(minimumDuration: Duration.zero));
+    test(
+      'routes to onboarding on first launch when onboardingCompleted is false',
+      () async {
+        splashBloc.add(const SplashStarted(minimumDuration: Duration.zero));
 
-      await expectLater(
-        splashBloc.stream,
-        emits(const SplashNavigationReady(SplashDestination.onboarding)),
-      );
-    });
+        await expectLater(
+          splashBloc.stream,
+          emits(const SplashNavigationReady(SplashDestination.onboarding)),
+        );
+      },
+    );
 
     test(
-        'routes to languageSelection on returning launch with no persistent session',
-        () async {
-      await preferencesService.setOnboardingCompleted(true);
-      sessionBloc.add(const SessionRestored());
-      await sessionBloc.stream.first;
+      'routes to guestHome on returning launch with no persistent session',
+      () async {
+        await preferencesService.setOnboardingCompleted(true);
+        sessionBloc.add(const SessionRestored());
+        await sessionBloc.stream.first;
 
-      splashBloc.add(const SplashStarted(minimumDuration: Duration.zero));
+        splashBloc.add(const SplashStarted(minimumDuration: Duration.zero));
 
-      await expectLater(
-        splashBloc.stream,
-        emits(const SplashNavigationReady(SplashDestination.languageSelection)),
-      );
-    });
+        await expectLater(
+          splashBloc.stream,
+          emits(const SplashNavigationReady(SplashDestination.guestHome)),
+        );
+      },
+    );
 
-    test('routes to signedInHome on returning launch with persistent session',
-        () async {
-      await preferencesService.setOnboardingCompleted(true);
-      await preferencesService.savePersistentSession(userId: 'rahim-1');
-      sessionBloc.add(const SessionRestored());
-      await sessionBloc.stream.first;
+    test(
+      'routes to signedInHome on returning launch with persistent session',
+      () async {
+        await preferencesService.setOnboardingCompleted(true);
+        await preferencesService.savePersistentSession(userId: 'rahim-1');
+        sessionBloc.add(const SessionRestored());
+        await sessionBloc.stream.first;
 
-      splashBloc.add(const SplashStarted(minimumDuration: Duration.zero));
+        splashBloc.add(const SplashStarted(minimumDuration: Duration.zero));
 
-      await expectLater(
-        splashBloc.stream,
-        emits(const SplashNavigationReady(SplashDestination.signedInHome)),
-      );
-    });
+        await expectLater(
+          splashBloc.stream,
+          emits(const SplashNavigationReady(SplashDestination.signedInHome)),
+        );
+      },
+    );
   });
 }

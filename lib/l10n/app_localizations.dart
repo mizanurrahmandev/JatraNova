@@ -497,13 +497,13 @@ abstract class AppLocalizations {
   /// No description provided for @resetPasswordSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'Enter your email address and\nwe\'ll send you a reset link.'**
+  /// **'Password recovery is not active in this\nlocal demo. Enter your email to preview.'**
   String get resetPasswordSubtitle;
 
   /// No description provided for @sendResetLink.
   ///
   /// In en, this message translates to:
-  /// **'Send Reset Link'**
+  /// **'Continue (Demo)'**
   String get sendResetLink;
 
   /// No description provided for @backToLogin.
@@ -515,7 +515,7 @@ abstract class AppLocalizations {
   /// No description provided for @forgotPasswordNotImplementedNotice.
   ///
   /// In en, this message translates to:
-  /// **'Password recovery is not implemented yet in this demo.'**
+  /// **'Password recovery is not available in this offline demo. No email was sent.'**
   String get forgotPasswordNotImplementedNotice;
 
   /// No description provided for @greetingMorning.
@@ -641,7 +641,7 @@ abstract class AppLocalizations {
   /// No description provided for @ticketHandover.
   ///
   /// In en, this message translates to:
-  /// **'Ticket\nHandover'**
+  /// **'Ticket\nExchange'**
   String get ticketHandover;
 
   /// No description provided for @ticketHandoverDesc.
@@ -749,7 +749,7 @@ abstract class AppLocalizations {
   /// No description provided for @handoverPlaceholderTitle.
   ///
   /// In en, this message translates to:
-  /// **'Ticket Handover'**
+  /// **'Ticket Exchange'**
   String get handoverPlaceholderTitle;
 }
 

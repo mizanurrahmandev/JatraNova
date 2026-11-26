@@ -19,27 +19,35 @@ class OnboardingBloc extends Bloc<OnboardingEvent, OnboardingState> {
     OnboardingNextRequested event,
     Emitter<OnboardingState> emit,
   ) {
+    if (state is OnboardingNavigationReady) {
+      return;
+    }
     final target = event.step == 2
         ? OnboardingNavigationTarget.step3
         : OnboardingNavigationTarget.nextStep;
     emit(OnboardingNavigationReady(target));
   }
 
-  void _onSkipRequested(
+  Future<void> _onSkipRequested(
     OnboardingSkipRequested event,
     Emitter<OnboardingState> emit,
-  ) {
-    emit(
-      const OnboardingNavigationReady(
-        OnboardingNavigationTarget.languageSelection,
-      ),
-    );
+  ) async {
+    await _completeOnboardingAndNavigate(emit);
   }
 
   Future<void> _onCompletedRequested(
     OnboardingCompletedRequested event,
     Emitter<OnboardingState> emit,
   ) async {
+    await _completeOnboardingAndNavigate(emit);
+  }
+
+  Future<void> _completeOnboardingAndNavigate(
+    Emitter<OnboardingState> emit,
+  ) async {
+    if (state is OnboardingNavigationReady) {
+      return;
+    }
     if (!_preferencesService.onboardingCompleted) {
       await _preferencesService.setOnboardingCompleted(true);
     }

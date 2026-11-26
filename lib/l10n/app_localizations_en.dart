@@ -218,17 +218,17 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get resetPasswordSubtitle =>
-      'Enter your email address and\nwe\'ll send you a reset link.';
+      'Password recovery is not active in this\nlocal demo. Enter your email to preview.';
 
   @override
-  String get sendResetLink => 'Send Reset Link';
+  String get sendResetLink => 'Continue (Demo)';
 
   @override
   String get backToLogin => 'Back to Login';
 
   @override
   String get forgotPasswordNotImplementedNotice =>
-      'Password recovery is not implemented yet in this demo.';
+      'Password recovery is not available in this offline demo. No email was sent.';
 
   @override
   String get greetingMorning => 'Good morning,';
@@ -299,7 +299,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get connectingJourneyDesc => 'Same-operator hub transfer';
 
   @override
-  String get ticketHandover => 'Ticket\nHandover';
+  String get ticketHandover => 'Ticket\nExchange';
 
   @override
   String get ticketHandoverDesc => '50% back to exchanger';
@@ -354,5 +354,5 @@ class AppLocalizationsEn extends AppLocalizations {
   String get connectingJourneyPlaceholderTitle => 'Connecting Journey';
 
   @override
-  String get handoverPlaceholderTitle => 'Ticket Handover';
+  String get handoverPlaceholderTitle => 'Ticket Exchange';
 }

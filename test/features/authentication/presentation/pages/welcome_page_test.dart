@@ -57,7 +57,6 @@ void main() {
     WidgetTester tester, {
     String languageCode = 'en',
   }) async {
-    await getIt<IPreferencesService>().setOnboardingCompleted(true);
     await getIt<IPreferencesService>().setSelectedLanguage(languageCode);
     getIt<LocaleBloc>().add(const LocaleInitialized());
     setViewport(tester);
@@ -68,6 +67,8 @@ void main() {
 
     await tester.pump(const Duration(milliseconds: 1600));
     await tester.pumpAndSettle();
+    await tester.tap(find.text(languageCode == 'bn' ? 'এড়িয়ে যান' : 'Skip'));
+    await tester.pumpAndSettle();
     expect(find.byType(LanguageSelectionPage), findsOneWidget);
 
     await tester.tap(find.byKey(const Key('language_continue_button')));
@@ -76,37 +77,39 @@ void main() {
   }
 
   testWidgets(
-      'WelcomePage renders all reference elements, assets, and buttons in English',
-      (WidgetTester tester) async {
-    await pumpToWelcomePage(tester);
+    'WelcomePage renders all reference elements, assets, and buttons in English',
+    (WidgetTester tester) async {
+      await pumpToWelcomePage(tester);
 
-    expect(find.byType(Image), findsNWidgets(2));
-    final brandText = tester.widget<RichText>(
-      find.byWidgetPredicate(
-        (widget) =>
-            widget is RichText && widget.text.toPlainText() == 'JatraNova',
-      ),
-    );
-    expect(brandText.text.toPlainText(), 'JatraNova');
+      expect(find.byType(Image), findsNWidgets(2));
+      final brandText = tester.widget<RichText>(
+        find.byWidgetPredicate(
+          (widget) =>
+              widget is RichText && widget.text.toPlainText() == 'JatraNova',
+        ),
+      );
+      expect(brandText.text.toPlainText(), 'JatraNova');
 
-    expect(find.text('Your Journey, Connected.'), findsOneWidget);
-    expect(find.text('Welcome to\nJatraNova'), findsOneWidget);
-    expect(
-      find.text('Book, track and manage\nyour journeys with ease.'),
-      findsOneWidget,
-    );
-    expect(find.byKey(const Key('welcome_login_button')), findsOneWidget);
-    expect(find.text('Login'), findsOneWidget);
-    expect(find.byKey(const Key('welcome_register_button')), findsOneWidget);
-    expect(find.text('Register'), findsOneWidget);
-    expect(find.text('or'), findsOneWidget);
-    expect(find.byKey(const Key('welcome_guest_button')), findsOneWidget);
-    expect(find.text('Continue as Guest'), findsOneWidget);
-    expect(tester.takeException(), isNull);
-  });
+      expect(find.text('Your Journey, Connected.'), findsOneWidget);
+      expect(find.text('Welcome to\nJatraNova'), findsOneWidget);
+      expect(
+        find.text('Book, track and manage\nyour journeys with ease.'),
+        findsOneWidget,
+      );
+      expect(find.byKey(const Key('welcome_login_button')), findsOneWidget);
+      expect(find.text('Login'), findsOneWidget);
+      expect(find.byKey(const Key('welcome_register_button')), findsOneWidget);
+      expect(find.text('Register'), findsOneWidget);
+      expect(find.text('or'), findsOneWidget);
+      expect(find.byKey(const Key('welcome_guest_button')), findsOneWidget);
+      expect(find.text('Continue as Guest'), findsOneWidget);
+      expect(tester.takeException(), isNull);
+    },
+  );
 
-  testWidgets('WelcomePage renders expected localized text in Bangla',
-      (WidgetTester tester) async {
+  testWidgets('WelcomePage renders expected localized text in Bangla', (
+    WidgetTester tester,
+  ) async {
     await pumpToWelcomePage(tester, languageCode: 'bn');
 
     final brandText = tester.widget<RichText>(
@@ -130,69 +133,70 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('Login, Register, and Continue as Guest navigate to expected routes',
-      (WidgetTester tester) async {
-    await pumpToWelcomePage(tester);
-    await tester.tap(find.byKey(const Key('welcome_login_button')));
-    await tester.pumpAndSettle();
-    expect(
-      getIt<AppRoute>().router.routeInformationProvider.value.uri.path,
-      RoutePath.login,
-    );
-    expect(find.byType(LoginPage), findsOneWidget);
-    expect(find.text('Welcome back!'), findsOneWidget);
+  testWidgets(
+    'Login, Register, and Continue as Guest navigate to expected routes',
+    (WidgetTester tester) async {
+      await pumpToWelcomePage(tester);
+      await tester.tap(find.byKey(const Key('welcome_login_button')));
+      await tester.pumpAndSettle();
+      expect(
+        getIt<AppRoute>().router.routeInformationProvider.value.uri.path,
+        RoutePath.login,
+      );
+      expect(find.byType(LoginPage), findsOneWidget);
+      expect(find.text('Welcome back!'), findsOneWidget);
 
-    getIt<AppRoute>().router.go(RoutePath.welcome);
-    await tester.pumpAndSettle();
-    await tester.tap(find.byKey(const Key('welcome_register_button')));
-    await tester.pumpAndSettle();
-    expect(
-      getIt<AppRoute>().router.routeInformationProvider.value.uri.path,
-      RoutePath.register,
-    );
-    expect(find.text('Register'), findsOneWidget);
+      getIt<AppRoute>().router.go(RoutePath.welcome);
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('welcome_register_button')));
+      await tester.pumpAndSettle();
+      expect(
+        getIt<AppRoute>().router.routeInformationProvider.value.uri.path,
+        RoutePath.register,
+      );
+      expect(find.text('Register'), findsOneWidget);
 
-    getIt<AppRoute>().router.go(RoutePath.welcome);
-    await tester.pumpAndSettle();
-    await tester.tap(find.byKey(const Key('welcome_guest_button')));
-    await tester.pump();
-    await tester.runAsync(
-      () => Future<void>.delayed(const Duration(milliseconds: 300)),
-    );
-    await tester.pumpAndSettle();
-    expect(
-      getIt<AppRoute>().router.routeInformationProvider.value.uri.path,
-      RoutePath.guestHome,
-    );
-    expect(find.byType(HomePage), findsOneWidget);
-  });
-
-  testWidgets('WelcomePage renders without overflow on small and landscape viewports',
-      (WidgetTester tester) async {
-    for (final size in const <Size>[
-      Size(320, 568),
-      Size(800, 600),
-    ]) {
-      setViewport(tester, size: size, dpr: 1.0);
-      await tester.pumpWidget(
-        ScreenUtilInit(
-          designSize: const Size(
-            AppConstants.designWidth,
-            AppConstants.designHeight,
-          ),
-          minTextAdapt: true,
-          splitScreenMode: true,
-          builder: (_, _) => MaterialApp(
-            supportedLocales: AppLocalizations.supportedLocales,
-            localizationsDelegates: AppLocalizations.localizationsDelegates,
-            home: const WelcomePage(),
-          ),
-        ),
+      getIt<AppRoute>().router.go(RoutePath.welcome);
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('welcome_guest_button')));
+      await tester.pump();
+      await tester.runAsync(
+        () => Future<void>.delayed(const Duration(milliseconds: 300)),
       );
       await tester.pumpAndSettle();
+      expect(
+        getIt<AppRoute>().router.routeInformationProvider.value.uri.path,
+        RoutePath.guestHome,
+      );
+      expect(find.byType(HomePage), findsOneWidget);
+    },
+  );
 
-      expect(find.byType(WelcomePage), findsOneWidget);
-      expect(tester.takeException(), isNull);
-    }
-  });
+  testWidgets(
+    'WelcomePage renders without overflow on small and landscape viewports',
+    (WidgetTester tester) async {
+      for (final size in const <Size>[Size(320, 568), Size(800, 600)]) {
+        setViewport(tester, size: size, dpr: 1.0);
+        await tester.pumpWidget(
+          ScreenUtilInit(
+            designSize: const Size(
+              AppConstants.designWidth,
+              AppConstants.designHeight,
+            ),
+            minTextAdapt: true,
+            splitScreenMode: true,
+            builder: (_, _) => MaterialApp(
+              supportedLocales: AppLocalizations.supportedLocales,
+              localizationsDelegates: AppLocalizations.localizationsDelegates,
+              home: const WelcomePage(),
+            ),
+          ),
+        );
+        await tester.pumpAndSettle();
+
+        expect(find.byType(WelcomePage), findsOneWidget);
+        expect(tester.takeException(), isNull);
+      }
+    },
+  );
 }

@@ -66,10 +66,10 @@
   "termsRequiredError": "Please agree to the Terms & Conditions.",
   "registerNotImplementedNotice": "Account registration is not yet connected.",
   "resetPasswordTitle": "Reset Your Password",
-  "resetPasswordSubtitle": "Enter your email address and\nwe'll send you a reset link.",
-  "sendResetLink": "Send Reset Link",
+  "resetPasswordSubtitle": "Password recovery is not active in this\nlocal demo. Enter your email to preview.",
+  "sendResetLink": "Continue (Demo)",
   "backToLogin": "Back to Login",
-  "forgotPasswordNotImplementedNotice": "Password recovery is not implemented yet in this demo.",
+  "forgotPasswordNotImplementedNotice": "Password recovery is not available in this offline demo. No email was sent.",
   "greetingMorning": "Good morning,",
   "greetingAfternoon": "Good afternoon,",
   "greetingEvening": "Good evening,",
@@ -118,7 +118,7 @@
   },
   "connectingJourney": "Connecting\nJourney",
   "connectingJourneyDesc": "Same-operator hub transfer",
-  "ticketHandover": "Ticket\nHandover",
+  "ticketHandover": "Ticket\nExchange",
   "ticketHandoverDesc": "50% back to exchanger",
   "navHome": "Home",
   "navSearch": "Search",
@@ -136,5 +136,5 @@
   "myTicketsPlaceholderTitle": "My Tickets",
   "profilePlaceholderTitle": "Profile",
   "connectingJourneyPlaceholderTitle": "Connecting Journey",
-  "handoverPlaceholderTitle": "Ticket Handover"
+  "handoverPlaceholderTitle": "Ticket Exchange"
 }
